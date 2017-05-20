@@ -61,7 +61,220 @@
 </div>
 <script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
 <script>
-eval(function(p,a,c,k,e,r){e=function(c){return(c<62?'':e(parseInt(c/62)))+((c=c%62)>35?String.fromCharCode(c+29):c.toString(36))};if('0'.replace(0,e)==0){while(c--)r[e(c)]=k[c];k=[function(e){return r[e]||e}];e=function(){return'([68acefhj-ln-qs-zA-Z]|1\\w)'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('$(".j:k(0)").O(s(){8($(".j:k(0)").W(\'p\')){u}q{$(\'#6\').e(\'v\',\'1\');$(\'#6\').w(\'P-F\',\'#1m\');$(\'#6\').w(\'X-Y\',\'Z 12 15 #1m\');$(\'.l\').c(\'查询\');$(".j:k(0)").16(\'p\');$(".j:k(1)").G(\'p\');$(".j:k(2)").G(\'p\')}});$(".j:k(1)").O(s(){8($(".j:k(1)").W(\'p\')){u}q{$(\'#6\').e(\'v\',\'2\');$(\'#6\').w(\'P-F\',\'#1n\');$(\'#6\').w(\'X-Y\',\'Z 12 15 #1n\');$(\'.l\').c(\'挂失\');$(".j:k(1)").16(\'p\');$(".j:k(0)").G(\'p\');$(".j:k(2)").G(\'p\')}});$(".j:k(2)").O(s(){8($(".j:k(2)").W(\'p\')){u}q{$(\'#6\').e(\'v\',\'3\');$(\'#6\').w(\'P-F\',\'#17\');$(\'#6\').w(\'X-Y\',\'Z 12 15 #17\');$(\'.l\').c(\'解挂\');$(".j:k(2)").16(\'p\');$(".j:k(0)").G(\'p\');$(".j:k(1)").G(\'p\')}});$(\'#6\').on(\'O\',s(){a x=$(\'1o[1p=x]\').1q();a y=$(\'1o[1p=y]\').1q();8(x.J!=11){f("学号格式不正确");u}8(!y.J){f("请输入密码");u}8($(\'#6\').e(\'v\')==1){$(\'.l\').t();$(\'.K\').o();$(\'#6\').e(\'n\',\'n\');$.18({19:\'./test.1a\',1b:L,v:{x:x,y:y},1c:"M",1d:\'1e\',1f:s(h){8(h=="H"){$(\'.l\').o();$(\'.K\').t();$(\'#6\').e(\'n\',A);f("密码错误，请重试");u}$(\'#search\').slideUp();a v=$(h).N("table");a Q=h.substring(h.J-40,h.J);a 1r=/<em>([1-9]\\d*|0)<\\/em>/g;a 1t=/<i>([1-9]\\d*\\.\\d*|0\\.\\d*[1-9]\\d*)<\\/i>/g;a 1u=/<b>(.*)<\\/b>/g;a 1v=$(Q.1g(1r)[0]).c();a 1w=$(Q.1g(1t)[0]).c();a 1x=$(Q.1g(1u)[0]).c();$(\'.I-num\').c(1v);$(\'.I-R\').c(1w);8(1x=="正常"){$(\'.I-S\').c("正常");$(\'.I-S\').w(\'F\',\'#17\')}q{$(\'.I-S\').c("已挂失");$(\'.I-S\').w(\'F\',\'red\')}$(\'body\').w(\'P-F\',\'#fff\');a B=v.1h().1h().1h();a 1i=(B.J-14)/10;8(1i<1){$(\'#f\').c("未查询到饮水以外的消费记录");$(\'#f\').o()}for(a i=0;i<1i;i++){a E=i*10+13;a domtimes=B[E];a T=$(B[E+4]).c();8(T.indexOf(\'饮水\')!=-1){continue}a U="";8(R($(B[E+5]).c())){U=R($(B[E+5]).c())}q{T="银行卡转帐";U="+"+$(B[E+5]).c()}a M="<C z=\\"list\\"><C z=\\"mtime\\"><D z=\\"mt-1z\\">今天</D><D z=\\"mt-1A\\">"+$(B[E]).c().1j(11,5)+"</D></C><C z=\\"yes\\"><i z=\\"fa fa-check-circle\\"></i></C><C z=\\"mdetail\\"><D z=\\"md-1z\\">"+U+"</D><D z=\\"md-1A\\">"+T+"</D></C></C>";$(\'#h\').append(M)}$(\'#h\').o()},H:s(){f(\'无法连接服务器，请联系我们修复！\');$(\'.l\').o();$(\'.K\').t();$(\'#6\').e(\'n\',A)},})}q 8($(\'#6\').e(\'v\')==2){a r=1D("你确定要挂失吗？");8(r==L){$(\'.l\').t();$(\'.1k\').o();$(\'#6\').e(\'n\',\'n\');$.18({19:\'./loss.1a\',1b:L,v:{x:x,y:y},1c:"M",1d:\'1e\',1f:s(h){8(h=="H"){$(\'.l\').o();$(\'.K\').t();$(\'#6\').e(\'n\',A);f("密码错误，请重试");u}8($(h).N(\'.V\').c()=="持卡人已挂失"){f(\'您已经是挂失状态！\')}q 8($(h).N(\'.V\').c()=="操作成功。如在7天内没找到失卡，请到校园卡服务部重新办理校园卡！"){f(\'挂失成功！\')}q{f(\'系统异常，请联系我们修复！\')}$(\'.l\').o();$(\'.1k\').t();$(\'#6\').e(\'n\',A)},H:s(){f(\'无法连接服务器，请联系我们修复！\');$(\'.l\').o();$(\'.1k\').t();$(\'#6\').e(\'n\',A)},})}}q{a r2=1D("你确定要解挂吗？");8(r2==L){$(\'.l\').t();$(\'.1l\').o();$(\'#6\').e(\'n\',\'n\');$.18({19:\'./noloss.1a\',1b:L,v:{x:x,y:y},1c:"M",1d:\'1e\',1f:s(h){8(h=="H"){$(\'.l\').o();$(\'.K\').t();$(\'#6\').e(\'n\',A);f("密码错误，请重试");u}8($(h).N(\'.V\').c()=="持卡人已解挂"){f(\'你的校园卡不在挂失状态，解挂失败\')}q 8($(h).N(\'.V\').c()=="操作成功"){f(\'解挂成功\')}q{f(\'系统异常，请联系我们修复！\')}$(\'.l\').o();$(\'.1l\').t();$(\'#6\').e(\'n\',A)},H:s(){f(\'无法连接服务器，请联系我们修复！\');$(\'.l\').o();$(\'.1l\').t();$(\'#6\').e(\'n\',A)},})}}});s R(m){a 1F=m.1j(0,1);8(1F=="-")u m.1j(1);q u 0}',[],104,'||||||send||if||var||text||attr|alert||result||nav|eq|nosearch||disabled|show|abled|else||function|hide|return|data|css|account|passwd|class|false|alldata|div|span|arrtimes|color|removeClass|error|card|length|searching|true|html|find|click|background|new_result|money|status|place|money2|biaotou|hasClass|box|shadow|0px|||5px|||30px|addClass|61c961|ajax|url|php|async|dataType|type|POST|success|match|children|times|substr|losing|nolosing|0089EE|f56767|input|name|val|reg_num||reg_money|reg_status|card_num|card_money|card_status||top|bot|||confirm||addor'.split('|'),0,{}))
+$(".nav:eq(0)").click(function() {
+	if ($(".nav:eq(0)").hasClass('abled')) {
+		return
+	} else {
+		$('#send').attr('data', '1');
+		$('#send').css('background-color', '#0089EE');
+		$('#send').css('box-shadow', '0px 5px 30px #0089EE');
+		$('.nosearch').text('查询');
+		$(".nav:eq(0)").addClass('abled');
+		$(".nav:eq(1)").removeClass('abled');
+		$(".nav:eq(2)").removeClass('abled')
+	}
+});
+$(".nav:eq(1)").click(function() {
+	if ($(".nav:eq(1)").hasClass('abled')) {
+		return
+	} else {
+		$('#send').attr('data', '2');
+		$('#send').css('background-color', '#f56767');
+		$('#send').css('box-shadow', '0px 5px 30px #f56767');
+		$('.nosearch').text('挂失');
+		$(".nav:eq(1)").addClass('abled');
+		$(".nav:eq(0)").removeClass('abled');
+		$(".nav:eq(2)").removeClass('abled')
+	}
+});
+$(".nav:eq(2)").click(function() {
+	if ($(".nav:eq(2)").hasClass('abled')) {
+		return
+	} else {
+		$('#send').attr('data', '3');
+		$('#send').css('background-color', '#61c961');
+		$('#send').css('box-shadow', '0px 5px 30px #61c961');
+		$('.nosearch').text('解挂');
+		$(".nav:eq(2)").addClass('abled');
+		$(".nav:eq(0)").removeClass('abled');
+		$(".nav:eq(1)").removeClass('abled')
+	}
+});
+$('#send').on('click', function() {
+	var account = $('input[name=account]').val();
+	var passwd = $('input[name=passwd]').val();
+	if (account.length != 11) {
+		alert("学号格式不正确");
+		return
+	}
+	if (!passwd.length) {
+		alert("请输入密码");
+		return
+	}
+	if ($('#send').attr('data') == 1) {
+		$('.nosearch').hide();
+		$('.searching').show();
+		$('#send').attr('disabled', 'disabled');
+		$.ajax({
+			url: './test.php',
+			async: true,
+			data: {
+				account: account,
+				passwd: passwd
+			},
+			dataType: "html",
+			type: 'POST',
+			success: function(result) {
+				if (result == "error") {
+					$('.nosearch').show();
+					$('.searching').hide();
+					$('#send').attr('disabled', false);
+					alert("密码错误，请重试");
+					return
+				}
+				$('#search').slideUp();
+				var data = $(result).find("table");
+				var new_result = result.substring(result.length - 40, result.length);
+				var reg_num = /<em>([1-9]\d*|0)<\/em>/g;
+				var reg_money = /<i>([1-9]\d*\.\d*|0\.\d*[1-9]\d*)<\/i>/g;
+				var reg_status = /<b>(.*)<\/b>/g;
+				var card_num = $(new_result.match(reg_num)[0]).text();
+				var card_money = $(new_result.match(reg_money)[0]).text();
+				var card_status = $(new_result.match(reg_status)[0]).text();
+				$('.card-num').text(card_num);
+				$('.card-money').text(card_money);
+				if (card_status == "正常") {
+					$('.card-status').text("正常");
+					$('.card-status').css('color', '#61c961')
+				} else {
+					$('.card-status').text("已挂失");
+					$('.card-status').css('color', 'red')
+				}
+				$('body').css('background-color', '#fff');
+				var alldata = data.children().children().children();
+				var times = (alldata.length - 14) / 10;
+				if (times < 1) {
+					$('#alert').text("未查询到饮水以外的消费记录");
+					$('#alert').show()
+				}
+				for (var i = 0; i < times; i++) {
+					var arrtimes = i * 10 + 13;
+					var domtimes = alldata[arrtimes];
+					var place = $(alldata[arrtimes + 4]).text();
+					if (place.indexOf('饮水') != -1) {
+						continue
+					}
+					var money2 = "";
+					if (money($(alldata[arrtimes + 5]).text())) {
+						money2 = money($(alldata[arrtimes + 5]).text())
+					} else {
+						place = "银行卡转帐";
+						money2 = "+" + $(alldata[arrtimes + 5]).text()
+					}
+					var html = "<div class=\"list\"><div class=\"mtime\"><span class=\"mt-top\">今天</span><span class=\"mt-bot\">" + $(alldata[arrtimes]).text().substr(11, 5) + "</span></div><div class=\"yes\"><i class=\"fa fa-check-circle\"></i></div><div class=\"mdetail\"><span class=\"md-top\">" + money2 + "</span><span class=\"md-bot\">" + place + "</span></div></div>";
+					$('#result').append(html)
+				}
+				$('#result').show()
+			},
+			error: function() {
+				alert('无法连接服务器，请联系我们修复！');
+				$('.nosearch').show();
+				$('.searching').hide();
+				$('#send').attr('disabled', false)
+			},
+		})
+	} else if ($('#send').attr('data') == 2) {
+		var r = confirm("你确定要挂失吗？");
+		if (r == true) {
+			$('.nosearch').hide();
+			$('.losing').show();
+			$('#send').attr('disabled', 'disabled');
+			$.ajax({
+				url: './loss.php',
+				async: true,
+				data: {
+					account: account,
+					passwd: passwd
+				},
+				dataType: "html",
+				type: 'POST',
+				success: function(result) {
+					if (result == "error") {
+						$('.nosearch').show();
+						$('.searching').hide();
+						$('#send').attr('disabled', false);
+						alert("密码错误，请重试");
+						return
+					}
+					if ($(result).find('.biaotou').text() == "持卡人已挂失") {
+						alert('您已经是挂失状态！')
+					} else if ($(result).find('.biaotou').text() == "操作成功。如在7天内没找到失卡，请到校园卡服务部重新办理校园卡！") {
+						alert('挂失成功！')
+					} else {
+						alert('系统异常，请联系我们修复！')
+					}
+					$('.nosearch').show();
+					$('.losing').hide();
+					$('#send').attr('disabled', false)
+				},
+				error: function() {
+					alert('无法连接服务器，请联系我们修复！');
+					$('.nosearch').show();
+					$('.losing').hide();
+					$('#send').attr('disabled', false)
+				},
+			})
+		}
+	} else {
+		var r2 = confirm("你确定要解挂吗？");
+		if (r2 == true) {
+			$('.nosearch').hide();
+			$('.nolosing').show();
+			$('#send').attr('disabled', 'disabled');
+			$.ajax({
+				url: './noloss.php',
+				async: true,
+				data: {
+					account: account,
+					passwd: passwd
+				},
+				dataType: "html",
+				type: 'POST',
+				success: function(result) {
+					if (result == "error") {
+						$('.nosearch').show();
+						$('.searching').hide();
+						$('#send').attr('disabled', false);
+						alert("密码错误，请重试");
+						return
+					}
+					if ($(result).find('.biaotou').text() == "持卡人已解挂") {
+						alert('你的校园卡不在挂失状态，解挂失败')
+					} else if ($(result).find('.biaotou').text() == "操作成功") {
+						alert('解挂成功')
+					} else {
+						alert('系统异常，请联系我们修复！')
+					}
+					$('.nosearch').show();
+					$('.nolosing').hide();
+					$('#send').attr('disabled', false)
+				},
+				error: function() {
+					alert('无法连接服务器，请联系我们修复！');
+					$('.nosearch').show();
+					$('.nolosing').hide();
+					$('#send').attr('disabled', false)
+				},
+			})
+		}
+	}
+});
+
+function money(m) {
+	var addor = m.substr(0, 1);
+	if (addor == "-") return m.substr(1);
+	else return 0
+}
 </script>
 </body>
 
