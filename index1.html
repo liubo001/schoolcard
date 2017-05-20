@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" id="viewport" name="viewport">
+	<title>校园卡查询～</title>
+	<link rel="stylesheet" href="./css/search.css" />
+	<link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" />
+</head>
+<body>
+<div id="search">
+<div class="bg"></div>
+<div id="contain">
+<div class="top">
+	<div class="nav abled">快捷查询</div>
+	<div class="nav">一键挂失</div>
+	<div class="nav">一键解挂</div>
+</div>
+<div class="cln">
+	<input type="number" name="account" placeholder="请输入学号" />
+</div>
+
+<div class="cln">
+	<input type="password" name="passwd" placeholder="请输入密码(默认密码为身份证后6位)">
+</div>
+
+<button id="send" data="1">
+	<span class="searching" style="display: none">
+		<i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>正在查询中，请稍后...
+	</span>
+	<span class="nosearch">查询</span>
+	<span class="losing" style="display: none">
+		<i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>正在挂失中，请稍后...
+	</span>
+	<span class="nolosing" style="display: none">
+		<i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>正在解挂中，请稍后...
+	</span>
+</button>
+</div>
+<div class="note">
+	数据来源：鲁东大学校园卡系统。
+</div>
+<div class="note">
+	技术支持：<a href="http://www.ldustu.com" target="_blank">鲁东大学学生网</a>
+</div>
+</div>
+<div id="result" style="display:none">
+	<div class="r-top" style="background-color:#000;text-align:center;">
+		<a href="javascript:window.location.reload();" class="back">&#60;&nbsp;返回</a>
+		<span style="color:#fff;font-weight:800;font-size:18px">查询结果</span>
+	</div>
+	<div class="r-top" style="text-align: center">
+		&nbsp;&nbsp;卡号:
+		<span style="font-size:16px;font-weight:800;" class="card-num"></span>
+		&nbsp;&nbsp;&nbsp;余额:
+		<span style="font-size:16px;font-weight:800;" class="card-money"></span>
+		元<!--span class="what">?</span-->&nbsp;&nbsp;&nbsp;状态:
+		<span class="card-status" style="font-size:16px;"></span>
+	</div>
+	<div id="alert" style="display:none;text-align: center;margin-top:100px;"></div>
+</div>
+<script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+<script>
+eval(function(p,a,c,k,e,r){e=function(c){return(c<62?'':e(parseInt(c/62)))+((c=c%62)>35?String.fromCharCode(c+29):c.toString(36))};if('0'.replace(0,e)==0){while(c--)r[e(c)]=k[c];k=[function(e){return r[e]||e}];e=function(){return'([68acefhj-ln-qs-zA-Z]|1\\w)'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('$(".j:k(0)").O(s(){8($(".j:k(0)").W(\'p\')){u}q{$(\'#6\').e(\'v\',\'1\');$(\'#6\').w(\'P-F\',\'#1m\');$(\'#6\').w(\'X-Y\',\'Z 12 15 #1m\');$(\'.l\').c(\'查询\');$(".j:k(0)").16(\'p\');$(".j:k(1)").G(\'p\');$(".j:k(2)").G(\'p\')}});$(".j:k(1)").O(s(){8($(".j:k(1)").W(\'p\')){u}q{$(\'#6\').e(\'v\',\'2\');$(\'#6\').w(\'P-F\',\'#1n\');$(\'#6\').w(\'X-Y\',\'Z 12 15 #1n\');$(\'.l\').c(\'挂失\');$(".j:k(1)").16(\'p\');$(".j:k(0)").G(\'p\');$(".j:k(2)").G(\'p\')}});$(".j:k(2)").O(s(){8($(".j:k(2)").W(\'p\')){u}q{$(\'#6\').e(\'v\',\'3\');$(\'#6\').w(\'P-F\',\'#17\');$(\'#6\').w(\'X-Y\',\'Z 12 15 #17\');$(\'.l\').c(\'解挂\');$(".j:k(2)").16(\'p\');$(".j:k(0)").G(\'p\');$(".j:k(1)").G(\'p\')}});$(\'#6\').on(\'O\',s(){a x=$(\'1o[1p=x]\').1q();a y=$(\'1o[1p=y]\').1q();8(x.J!=11){f("学号格式不正确");u}8(!y.J){f("请输入密码");u}8($(\'#6\').e(\'v\')==1){$(\'.l\').t();$(\'.K\').o();$(\'#6\').e(\'n\',\'n\');$.18({19:\'./test.1a\',1b:L,v:{x:x,y:y},1c:"M",1d:\'1e\',1f:s(h){8(h=="H"){$(\'.l\').o();$(\'.K\').t();$(\'#6\').e(\'n\',A);f("密码错误，请重试");u}$(\'#search\').slideUp();a v=$(h).N("table");a Q=h.substring(h.J-40,h.J);a 1r=/<em>([1-9]\\d*|0)<\\/em>/g;a 1t=/<i>([1-9]\\d*\\.\\d*|0\\.\\d*[1-9]\\d*)<\\/i>/g;a 1u=/<b>(.*)<\\/b>/g;a 1v=$(Q.1g(1r)[0]).c();a 1w=$(Q.1g(1t)[0]).c();a 1x=$(Q.1g(1u)[0]).c();$(\'.I-num\').c(1v);$(\'.I-R\').c(1w);8(1x=="正常"){$(\'.I-S\').c("正常");$(\'.I-S\').w(\'F\',\'#17\')}q{$(\'.I-S\').c("已挂失");$(\'.I-S\').w(\'F\',\'red\')}$(\'body\').w(\'P-F\',\'#fff\');a B=v.1h().1h().1h();a 1i=(B.J-14)/10;8(1i<1){$(\'#f\').c("未查询到饮水以外的消费记录");$(\'#f\').o()}for(a i=0;i<1i;i++){a E=i*10+13;a domtimes=B[E];a T=$(B[E+4]).c();8(T.indexOf(\'饮水\')!=-1){continue}a U="";8(R($(B[E+5]).c())){U=R($(B[E+5]).c())}q{T="银行卡转帐";U="+"+$(B[E+5]).c()}a M="<C z=\\"list\\"><C z=\\"mtime\\"><D z=\\"mt-1z\\">今天</D><D z=\\"mt-1A\\">"+$(B[E]).c().1j(11,5)+"</D></C><C z=\\"yes\\"><i z=\\"fa fa-check-circle\\"></i></C><C z=\\"mdetail\\"><D z=\\"md-1z\\">"+U+"</D><D z=\\"md-1A\\">"+T+"</D></C></C>";$(\'#h\').append(M)}$(\'#h\').o()},H:s(){f(\'无法连接服务器，请联系我们修复！\');$(\'.l\').o();$(\'.K\').t();$(\'#6\').e(\'n\',A)},})}q 8($(\'#6\').e(\'v\')==2){a r=1D("你确定要挂失吗？");8(r==L){$(\'.l\').t();$(\'.1k\').o();$(\'#6\').e(\'n\',\'n\');$.18({19:\'./loss.1a\',1b:L,v:{x:x,y:y},1c:"M",1d:\'1e\',1f:s(h){8(h=="H"){$(\'.l\').o();$(\'.K\').t();$(\'#6\').e(\'n\',A);f("密码错误，请重试");u}8($(h).N(\'.V\').c()=="持卡人已挂失"){f(\'您已经是挂失状态！\')}q 8($(h).N(\'.V\').c()=="操作成功。如在7天内没找到失卡，请到校园卡服务部重新办理校园卡！"){f(\'挂失成功！\')}q{f(\'系统异常，请联系我们修复！\')}$(\'.l\').o();$(\'.1k\').t();$(\'#6\').e(\'n\',A)},H:s(){f(\'无法连接服务器，请联系我们修复！\');$(\'.l\').o();$(\'.1k\').t();$(\'#6\').e(\'n\',A)},})}}q{a r2=1D("你确定要解挂吗？");8(r2==L){$(\'.l\').t();$(\'.1l\').o();$(\'#6\').e(\'n\',\'n\');$.18({19:\'./noloss.1a\',1b:L,v:{x:x,y:y},1c:"M",1d:\'1e\',1f:s(h){8(h=="H"){$(\'.l\').o();$(\'.K\').t();$(\'#6\').e(\'n\',A);f("密码错误，请重试");u}8($(h).N(\'.V\').c()=="持卡人已解挂"){f(\'你的校园卡不在挂失状态，解挂失败\')}q 8($(h).N(\'.V\').c()=="操作成功"){f(\'解挂成功\')}q{f(\'系统异常，请联系我们修复！\')}$(\'.l\').o();$(\'.1l\').t();$(\'#6\').e(\'n\',A)},H:s(){f(\'无法连接服务器，请联系我们修复！\');$(\'.l\').o();$(\'.1l\').t();$(\'#6\').e(\'n\',A)},})}}});s R(m){a 1F=m.1j(0,1);8(1F=="-")u m.1j(1);q u 0}',[],104,'||||||send||if||var||text||attr|alert||result||nav|eq|nosearch||disabled|show|abled|else||function|hide|return|data|css|account|passwd|class|false|alldata|div|span|arrtimes|color|removeClass|error|card|length|searching|true|html|find|click|background|new_result|money|status|place|money2|biaotou|hasClass|box|shadow|0px|||5px|||30px|addClass|61c961|ajax|url|php|async|dataType|type|POST|success|match|children|times|substr|losing|nolosing|0089EE|f56767|input|name|val|reg_num||reg_money|reg_status|card_num|card_money|card_status||top|bot|||confirm||addor'.split('|'),0,{}))
+</script>
+</body>
+
+</html>
